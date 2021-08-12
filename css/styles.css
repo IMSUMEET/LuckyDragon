@@ -10,6 +10,10 @@ h1 {
  	margin-bottom: 0;
  }
 
+.centralize-toss {
+	margin-left: 80px;
+	padding: auto;
+}
 
 
 #dragon1 {
@@ -28,6 +32,11 @@ h1 {
 	top: 300px;
 }
 
+#roll-dice {
+	position: absolute;
+	left: 880px;
+	top: 650px;
+}
 
 
 
@@ -63,9 +72,8 @@ h1 {
 .roll {
 	position: absolute;
 	width: 200px;
-	left: 800px;
+	left: 900px;
 	margin-top: 400px;
-	background-color: blue;
 }
 
 .row1 {
