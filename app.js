@@ -30,10 +30,50 @@ for(let i = 100; i >=1 ; i-- ){
 	$(".main").append("<div class='block'>"+i+"</div>");
 }
 
-function findPosition(blockPosition){
-	blockPosition = blockPosition - 1;
-	const row = 10 - Math.floor(blockPosition/10);
-	const toLeft = row % 2 === 0;
-	const column = blockPosition%10
+// getting position of the block with the given number -------------------------------------------------------------
+
+function findPosition(blockPosition) {
+
+	let row ;
+	let toLeft = false;
+	let toRight = false;
+
+
+	// check row of the block
+	if(blockPosition % 10 === 0){
+		row = Math.floor(blockPosition / 10);
+	}else {
+		row  = Math.floor(blockPosition/10) + 1;
+	}
+	
+	// check direction
+	if(row % 2 === 0) {
+		// if row number is even
+		toLeft = true;
+	}else {
+		// if row number is odd
+		toRight = true;
+	}
+
+	let actualPosition = 0;
+
+	// final calculation
+	if(toRight) {
+		if(blockPosition % 10 === 0){
+			actualPosition += (11 - row) * 10;
+		}else {
+			actualPosition += ((10 - row) * 10) + (blockPosition % 10);
+		}
+		
+	}else{
+		if(blockPosition % 10 === 0) {
+			actualPosition += ((10 - row) * 10) + 1;
+		}else {
+			actualPosition += ( ( (10 - row) * 10) + (11 - (blockPosition % 10)) );
+		}
+	}
+
+	return actualPosition;
+
 }
 
