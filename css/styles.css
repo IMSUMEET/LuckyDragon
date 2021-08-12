@@ -1,0 +1,172 @@
+
+h1 { 
+	margin: 20px;
+	color: #1f4787;
+ 	font-family: 'Trocchi', serif;
+ 	font-size: 45px; 
+ 	font-weight: normal; 
+ 	line-height: 48px; 
+ 	margin-left: 45px;
+ 	margin-bottom: 0;
+ }
+
+
+
+#dragon1 {
+	color: blue;
+	font-size: 30px;
+}
+
+#dragon2 {
+	color: red;
+	font-size: 30px;
+}
+
+#toss-button {
+	position: absolute;
+	left: 900px;
+	top: 300px;
+}
+
+
+
+
+
+.main {
+	width:700px ;
+	background-color: skyblue;
+	margin-top: 30px;
+	margin-left: 50px;
+	padding: 0px;
+	position: relative
+	
+}
+
+.innerBlocks {
+	height: 68px;
+	text-align: center;
+	border: 2px solid black;
+	width: 70px;
+	background-color: white;
+	position: absolute;
+}
+
+
+.toss {
+	position: absolute;
+	width: 200px;
+	left: 800px;
+	margin-top: 0;
+}
+
+
+.roll {
+	position: absolute;
+	width: 200px;
+	left: 800px;
+	margin-top: 400px;
+	background-color: blue;
+}
+
+.row1 {
+	top: 0px;
+}
+
+.row2 {
+	top: 68px;
+}
+
+.row3 {
+
+	top: 136px;
+}
+
+.row4 {
+
+	top: 204px;
+}
+
+.row5 {
+
+	top: 272px;
+}
+
+.row6 {
+
+	top: 340px;
+}
+
+.row7 {
+
+	top: 408px;
+}
+
+.row8 {
+
+	top: 476px;
+}
+
+.row9 {
+
+	top: 544px;
+}
+
+.row10 {
+
+	top: 612px;
+}
+
+ ____________________ columns __________________
+
+.column1 {
+
+	left: 0px;
+}
+
+.column2 {
+
+	left: 70px;
+}
+
+.column3 {
+
+	left: 140px;
+}
+
+.column4 {
+
+	left: 210px;
+}
+
+.column5 {
+
+	left: 280px;
+}
+
+.column6 {
+
+	left: 350px;
+}
+
+.column7 {
+
+	left: 420px;
+}
+
+.column8 {
+
+	left: 490px;
+}
+
+.column9 {
+
+	left: 560px;
+}
+
+.column10 {
+
+	left: 630px;
+}
+
+
+
