@@ -10,11 +10,6 @@ h1 {
  	margin-bottom: 0;
  }
 
-.centralize-toss {
-	margin-left: 80px;
-	padding: auto;
-}
-
 
 #dragon1 {
 	color: blue;
@@ -26,155 +21,52 @@ h1 {
 	font-size: 30px;
 }
 
-#toss-button {
-	position: absolute;
-	left: 900px;
-	top: 300px;
+
+.outer-main {
+	
+	display: flex;
+	justify-content: center;
 }
-
-#roll-dice {
-	position: absolute;
-	left: 880px;
-	top: 650px;
-}
-
-
-
 
 .main {
-	width:700px ;
+	overflow: hidden;
+	position: relative;
+	width:522px ;
+	max-width: 100%;
 	background-color: skyblue;
 	margin-top: 30px;
 	margin-left: 50px;
-	padding: 0px;
-	position: relative
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(10,1fr);
+	grid-auto-rows: 50px;
+	box-sizing: border-box;
+	padding: 2px;
+	gap: 2px;
+	box-shadow: 0px 0px 10px 0px skyblue;
+}
+.main > .block{
+	background-color: white;
 	
 }
 
-.innerBlocks {
-	height: 68px;
-	text-align: center;
-	border: 2px solid black;
-	width: 70px;
+.toss-roll{
+	position: absolute;
+	display: flex;
+	width: 250px;
+	flex-direction: column;
+	align-items: center;
+	gap : 20px;
+	top: 2px;
+	right: 2px;
+	transition: transform 2s ease-in;
+	transform: translateX(125%);
 	background-color: white;
-	position: absolute;
+	padding: 20px;
+	box-shadow: 0px 0px 15px 0px skyblue;
 }
 
-
-.toss {
-	position: absolute;
-	width: 200px;
-	left: 800px;
-	margin-top: 0;
+.toss-roll img {
+	height : 150px;
 }
-
-
-.roll {
-	position: absolute;
-	width: 200px;
-	left: 900px;
-	margin-top: 400px;
-}
-
-.row1 {
-	top: 0px;
-}
-
-.row2 {
-	top: 68px;
-}
-
-.row3 {
-
-	top: 136px;
-}
-
-.row4 {
-
-	top: 204px;
-}
-
-.row5 {
-
-	top: 272px;
-}
-
-.row6 {
-
-	top: 340px;
-}
-
-.row7 {
-
-	top: 408px;
-}
-
-.row8 {
-
-	top: 476px;
-}
-
-.row9 {
-
-	top: 544px;
-}
-
-.row10 {
-
-	top: 612px;
-}
-
- ____________________ columns __________________
-
-.column1 {
-
-	left: 0px;
-}
-
-.column2 {
-
-	left: 70px;
-}
-
-.column3 {
-
-	left: 140px;
-}
-
-.column4 {
-
-	left: 210px;
-}
-
-.column5 {
-
-	left: 280px;
-}
-
-.column6 {
-
-	left: 350px;
-}
-
-.column7 {
-
-	left: 420px;
-}
-
-.column8 {
-
-	left: 490px;
-}
-
-.column9 {
-
-	left: 560px;
-}
-
-.column10 {
-
-	left: 630px;
-}
-
-
 
