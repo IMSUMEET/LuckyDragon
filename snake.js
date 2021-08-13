@@ -24,7 +24,7 @@ class dragon {
 					setTimeout(()=>{
 						this.move(no - ((470 - prevX)/52) - 1);
 					},1000);
-				},1000);
+				},500);
 			}
 			else{
 				this.moveX = this.moveX + no*52;
@@ -44,7 +44,7 @@ class dragon {
 					setTimeout(()=>{
 						this.move(no - (prevX - 2)/52 - 1); 
 					},1000);
-				},1000);
+				},500);
 			}else{
 				this.moveX = this.moveX - no*52;
 				this.position = this.position + no;
@@ -55,4 +55,5 @@ class dragon {
 	render(){
 		$(this.id).css("transform", "translate( "+this.moveX+"px , "+ (this.moveY * -1 ) +"px )");
 	}
+
 }

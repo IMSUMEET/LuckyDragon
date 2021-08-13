@@ -1,4 +1,10 @@
 
+let dragon1 = new dragon("#dragon1");
+let dragon2 = new dragon("#dragon2");
+let player = 1;
+
+
+
 
 // Toss Part --------------------------------------------------------------------
 
@@ -16,15 +22,64 @@ $("#toss-button").click(function() {
 		$("#toss-image").attr("src" , resultImage);
 		$("#toss-image").addClass("centralize-toss");
 		isStarted = true;
-		$(".toss-roll").css("transition-delay", "2s");
-		$(".toss-roll").css("transform", "translateX(125%)");
+		setTimeout(()=>{
+			$("#toss-image").css("visibility", "hidden");
+			$("#toss-button").css("visibility", "hidden");
+			$("#roll-img").css("visibility" , "visible");
+			$("#roll-dice").css("visibility" , "visible");
+		},1500);
+		// $(".toss-roll").css("transition-delay", "2s");
+		// // $(".toss-roll").css("transform", "translateX(125%)");				
 	}else{
 		console.log("Game is already started");
 	}
-	
 });
 
 $(".toss-roll").css("transform", "translateX(0%)");
+
+
+
+
+// Rolling Dice Part ------------------------------------------------------------------
+
+$("#roll-dice").click(function() {
+
+	$("#roll-dice").css("visibility", "hidden");
+
+	var diceValue = Math.floor((Math.random() * 6) + 1);
+	$("#roll-img").attr("src", "images/dice" + diceValue + ".jpg");
+
+	if($("#roll-dice").text() === "Roll Player 1"){
+		setTimeout(()=>{
+			$("#roll-dice").text("Roll Player 2");
+		},2500);
+	}else {
+		setTimeout(()=>{
+			$("#roll-dice").text("Roll Player 1");
+		},2500);
+		
+	}
+
+	$(".toss-roll").css("transition-delay", "2s");
+	$(".toss-roll").css("transform", "translateX(180%)");
+
+
+	setTimeout(()=>{
+		if(player === 1){
+			dragon1.move(diceValue);
+			player = 2;
+		}else {
+			dragon2.move(diceValue);
+			player = 1;
+		}
+		$(".toss-roll").css("transform", "translateX(0%)");
+		$("#roll-dice").css("visibility", "visible");
+	},3500)
+	
+});
+
+
+
 
 // getting position of the block with the given number -------------------------------------------------------------
 
@@ -77,6 +132,5 @@ for(let i = 100; i >=1 ; i-- ){
 	$(".main").append("<div class='block' style='order :"+ findPosition(i) + ";'>"+ i +"</div>");
 }
 
-let dragon1 = new dragon("#dragon1");
 
-dragon1.move(67);
+
